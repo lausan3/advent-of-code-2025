@@ -10,7 +10,7 @@ use std::error::Error;
 /// ## Parameters
 /// id is the day of the puzzle you want to read the input for as a string slice.
 /// Example: "1" or "2".
-pub fn read_input(id: &str, file_ext: &str) -> Result<Vec<String>, Box<dyn Error>> {
+pub fn read_input(id: &str, file_ext: &str) -> Result<String, Box<dyn Error>> {
     let curr_dir = current_dir()
         .expect("Home should exist");
 
@@ -23,7 +23,7 @@ pub fn read_input(id: &str, file_ext: &str) -> Result<Vec<String>, Box<dyn Error
 
     let contents = std::fs::read_to_string(input_path)?;
 
-    Ok(contents.split_terminator("\n").map(|s| s.to_string()).collect())
+    Ok(contents)
 }
 
 

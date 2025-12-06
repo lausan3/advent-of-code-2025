@@ -42,7 +42,10 @@ fn find_safe_password(instructions: &Vec<String>) -> Result<i32, Box<dyn Error>>
 #[allow(unused)]
 pub fn day1_find_safe_password_p1() {
     let input = read_input::read_input("1", "txt")
-        .expect("Couldn't find the input at the specified path!");
+        .expect("Couldn't find the input at the specified path!")
+        .split("\n")
+        .map(|s| s.to_string())
+        .collect();
     
     let result = find_safe_password(&input);
 
@@ -106,7 +109,10 @@ fn find_safe_password_p2(instructions: &Vec<String>) -> Result<i32, Box<dyn Erro
 
 pub fn day1_find_safe_password_p2() {
     let input = read_input::read_input("1", "txt")
-        .expect("Couldn't find the input at the specified path!");
+        .expect("Couldn't find the input at the specified path!")
+        .split("\n")
+        .map(|s| s.to_string())
+        .collect();
     
     let result = find_safe_password_p2(&input);
 
