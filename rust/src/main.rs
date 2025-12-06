@@ -1,8 +1,8 @@
-use crate::solutions::day1;
+use crate::solutions::day2;
 
 mod solutions;
 mod helpers;
 
 fn main() {
-    day1::day1_find_safe_password_p2();
+    day2::day2_find_invalid_ids_p2();
 }
