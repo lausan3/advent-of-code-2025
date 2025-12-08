@@ -1,8 +1,8 @@
-use crate::solutions::day2;
+use crate::solutions::{day3};
 
 mod solutions;
 mod helpers;
 
 fn main() {
-    day2::day2_find_invalid_ids_p2();
+    day3::day3_find_total_maximum_joltage_p1();
 }
