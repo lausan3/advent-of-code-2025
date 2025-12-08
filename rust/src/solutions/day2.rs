@@ -1,4 +1,4 @@
-use std::{collections::HashSet, error::Error};
+use std::{error::Error};
 use crate::helpers::read_input::read_input;
 
 #[allow(unused)]
@@ -17,6 +17,7 @@ pub fn day2_find_invalid_ids_p1() {
     }
 }
 
+#[allow(unused)]
 pub fn day2_find_invalid_ids_p2() {
     let input = read_input("2", "txt")
         .expect("Couldn't find the input at the specified path!")
@@ -89,7 +90,7 @@ fn p2_find_invalid_ids(id_ranges: &Vec<String>) -> Result<i64, Box<dyn Error>> {
     Ok(sum_of_invalid_ids)
 }
 
-// This algorithm is O(2^n) where n is the length of the id string, which is the amount of unique numbers
+// This algorithm is O(n)
 fn p2_is_id_valid(id: String) -> bool {
     let id_size = id.len();
 
